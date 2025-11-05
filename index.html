@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinSpread | Inteligência para spreads financeiros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <a class="logo" href="#">FinSpread</a>
+        <nav class="nav-links" aria-label="Menu principal">
+          <a href="#solucao">Solução</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#calculadora">Calculadora</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <button class="btn btn-outline" type="button">Entrar</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="solucao">
+        <div class="container hero__content">
+          <div class="hero__text">
+            <span class="badge">Nova geração de análise de spreads</span>
+            <h1>Domine margens com inteligência em tempo real</h1>
+            <p>
+              O FinSpread reúne dados de mercado, risco e performance para
+              antecipar oportunidades, reduzir perdas e otimizar a precificação de
+              carteiras de crédito ou investimento.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn-primary" href="#dashboard">Ver demonstração</a>
+              <a class="btn btn-link" href="#calculadora">Explorar calculadora</a>
+            </div>
+            <dl class="hero__stats">
+              <div>
+                <dt>+27%</dt>
+                <dd>margem incremental média em operações acompanhadas</dd>
+              </div>
+              <div>
+                <dt>15 min</dt>
+                <dd>tempo para detectar alterações significativas de spread</dd>
+              </div>
+              <div>
+                <dt>98%</dt>
+                <dd>assertividade dos alertas de risco de compressão</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="hero__card" role="img" aria-label="Prévia do dashboard do FinSpread">
+            <div class="card__header">
+              <div>
+                <p class="card__title">Spreads monitorados</p>
+                <p class="card__subtitle">Atualizado há 2 min</p>
+              </div>
+              <span class="trend trend--up">+1,8%</span>
+            </div>
+            <div class="chart chart--line">
+              <div class="chart__sparkline" aria-hidden="true"></div>
+            </div>
+            <div class="card__body">
+              <ul class="kpi-list">
+                <li>
+                  <span>Spread médio</span>
+                  <strong>3,45 p.p.</strong>
+                </li>
+                <li>
+                  <span>Valor sob risco</span>
+                  <strong>R$ 12,6 mi</strong>
+                </li>
+                <li>
+                  <span>Alertas ativos</span>
+                  <strong>7</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="dashboard">
+        <div class="container">
+          <header class="section__header">
+            <h2>Insights operacionais em um painel único</h2>
+            <p>
+              Conecte fontes internas e externas para visualizar spreads de crédito,
+              curvas de juros, custos de funding e inadimplência em uma visão
+              consolidada.
+            </p>
+          </header>
+
+          <div class="grid grid--features">
+            <article class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">📊</div>
+              <h3>Monitoramento de spreads</h3>
+              <p>
+                Acompanhe spreads por produto, região ou segmento com benchmarks
+                setoriais e históricos em tempo real.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">⚙️</div>
+              <h3>Automação de precificação</h3>
+              <p>
+                Monte cenários com simulações de funding, inadimplência esperada e
+                ajustes de margem para decisões rápidas.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">🔔</div>
+              <h3>Alertas inteligentes</h3>
+              <p>
+                Receba alertas de compressão, risco de fuga de clientes ou aumento de
+                custos com base em IA proprietária.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">🧠</div>
+              <h3>Engine analítica</h3>
+              <p>
+                Combine machine learning e regras de negócio para definir políticas de
+                crédito e pricing alinhadas à estratégia.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="calculadora">
+        <div class="container">
+          <header class="section__header">
+            <h2>Simule estratégias de spread em segundos</h2>
+            <p>
+              Ajuste as variáveis e veja o impacto direto nas margens e na rentabilidade
+              do portfólio.
+            </p>
+          </header>
+
+          <div class="calculator">
+            <form class="calculator__form" aria-label="Calculadora de spread">
+              <div class="field">
+                <label for="base-rate">Taxa base (% a.a.)</label>
+                <input id="base-rate" type="number" min="0" step="0.01" value="9.75" />
+              </div>
+              <div class="field">
+                <label for="risk-premium">Prêmio de risco (% a.a.)</label>
+                <input id="risk-premium" type="number" min="0" step="0.01" value="2.10" />
+              </div>
+              <div class="field">
+                <label for="operational-cost">Custo operacional (% a.a.)</label>
+                <input id="operational-cost" type="number" min="0" step="0.01" value="1.30" />
+              </div>
+              <div class="field">
+                <label for="target-margin">Margem desejada (% a.a.)</label>
+                <input id="target-margin" type="number" min="0" step="0.01" value="3.00" />
+              </div>
+              <button class="btn btn-primary" type="button" id="simulate-btn">Calcular</button>
+            </form>
+
+            <div class="calculator__results" aria-live="polite">
+              <p class="results__title">Resultado da simulação</p>
+              <div class="results__cards">
+                <div class="result-card">
+                  <span>Spread mínimo recomendado</span>
+                  <strong id="recommended-spread">0%</strong>
+                </div>
+                <div class="result-card">
+                  <span>Spread atual</span>
+                  <strong id="current-spread">0%</strong>
+                </div>
+                <div class="result-card">
+                  <span>Margem adicional</span>
+                  <strong id="margin-delta">0%</strong>
+                </div>
+              </div>
+              <p class="results__footnote">
+                *Considera perdas esperadas com base em benchmarks de mercado. Ajuste os
+                parâmetros conforme a política de risco da sua instituição.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="cases">
+        <div class="container">
+          <header class="section__header">
+            <h2>Resultados comprovados</h2>
+            <p>Veja como empresas líderes evoluíram seus spreads com o FinSpread.</p>
+          </header>
+
+          <div class="grid grid--cases">
+            <article class="case-card">
+              <h3>Banco Atlas</h3>
+              <p>
+                Reduziu em 38% o tempo de ajuste de pricing com regras automatizadas e
+                alertas de compressão.
+              </p>
+              <span class="case-card__meta">ROI em 4 meses</span>
+            </article>
+            <article class="case-card">
+              <h3>CrediMais</h3>
+              <p>
+                Identificou R$ 18 mi em margens perdidas em carteiras consignadas em
+                apenas 6 semanas.
+              </p>
+              <span class="case-card__meta">Margem +22%</span>
+            </article>
+            <article class="case-card">
+              <h3>Atlas Asset</h3>
+              <p>
+                Antecipou movimentos na curva de juros com previsões proprietárias e
+                ajustes automáticos em tesouraria.
+              </p>
+              <span class="case-card__meta">Alfa +180 bps</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contato">
+        <div class="container">
+          <header class="section__header">
+            <h2>Pronto para elevar a inteligência de spreads?</h2>
+            <p>Solicite uma demonstração personalizada com nossos especialistas.</p>
+          </header>
+
+          <form class="contact" aria-label="Formulário de contato">
+            <div class="field">
+              <label for="name">Nome completo</label>
+              <input id="name" name="name" type="text" placeholder="Maria Silva" required />
+            </div>
+            <div class="field">
+              <label for="email">Email corporativo</label>
+              <input id="email" name="email" type="email" placeholder="maria@empresa.com" required />
+            </div>
+            <div class="field">
+              <label for="company">Empresa</label>
+              <input id="company" name="company" type="text" placeholder="FinCorp" />
+            </div>
+            <div class="field">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="4" placeholder="Conte-nos sobre seus desafios de spread..."></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Quero conversar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <div>
+          <a class="logo" href="#">FinSpread</a>
+          <p>
+            Plataforma completa para inteligência, precificação e monitoramento de spreads.
+          </p>
+        </div>
+        <div class="footer__links">
+          <a href="#solucao">Solução</a>
+          <a href="#cases">Cases</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <p class="footer__copy">© 2024 FinSpread. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="scripts/app.js" defer></script>
+  </body>
+</html>
